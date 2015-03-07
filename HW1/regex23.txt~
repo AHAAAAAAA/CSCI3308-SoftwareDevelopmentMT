@@ -1,0 +1,8 @@
+1.?
+2.?
+3.?
+4. grep '\(([0-9]\{3\})\|[0-9]\{3\}\)[ -]\?[0-9]\{3\}[ -]\?[0-9]\{4\}' regex.txt
+5. grep -E '303-441-[0-9]{4}' regex.txt
+6. grep -E '[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{3}' regex.txt
+7. grep -E '[a-zA-Z0-9]+@[a-zA-Z]+\.gov' regex.txt
+

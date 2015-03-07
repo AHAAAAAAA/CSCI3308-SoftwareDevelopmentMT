@@ -1,0 +1,35 @@
+<html>
+    <head>
+		<title>YES!</title>
+        
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        
+        <script>
+            $(document).ready(function (){
+            $.ajax({
+                'url': "http://api.openweathermap.org/data/2.5/weather",
+                'type':'GET',
+                'data': {'q':"Boulder,CO"},
+                'success':function(response){
+                    console.log(response);
+                    $('#results').append(response.main.temp-273);
+                    $('#results1').append(response.main.humidity);
+                    $('#results2').append(response.wind.speed);
+                    }
+                });
+            });
+        </script>
+	
+     </head>
+
+	<body>
+    <p><strong>WEATHER REST API</strong></p>
+    <p>Weather in Boulder,CO:</p>
+        <p id="results">Temperature: </p>
+        <p id="results1">Humidity: </p>
+        <p id="results2">Wind Speed: </p>
+        
+
+	</body>
+
+</html>

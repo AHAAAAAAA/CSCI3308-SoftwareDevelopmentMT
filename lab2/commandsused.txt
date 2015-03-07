@@ -1,0 +1,32 @@
+2.
+$diff -i fruitsOld.txt fruitsNew.txt
+	//Arrows point to which file has the different word
+
+3.
+$wc -l testPasswd.txt 	//Shows newlines
+$wc -m testPasswd.txt 	//Shows char
+4.
+$cut -d: -f 1 testPasswd.txt	//shws the usernames in testpasswd
+$cut -d" " -f 2,4 grades.txt	//shws LN and Hw1 in grades
+
+5.
+$cut -d: -f 4 testPasswd.txt | sort | uniq //sorts usernames
+$cut -d: -f 4 testPasswd.txt | sort | uniq > ./usrs.txt
+
+6.
+$ sed -e 's/[a-z]//g' leetSpeak.txt //removes all letters
+$ sed -e 's/[0-9]//g' leetSpeak.txt //removes all numbers
+$ sed -e 's/[a-z]/_/g' leetSpeak.txt //replaces all numbers with _
+$ sed -e 's/0/o/g' leetSpeak.txt | sed -e 's/0/o/g' | sed -e 's/3/e/g' | sed -e 's/4/a/g' | sed -e 's/7/t/g' | sed -e 's/5/s/g' | sed -e 's/1/i/g'|	//replaces leet numbers with letters
+OR
+$ sed -e "s/0/o/g" -e "s/1/i/g" -e "s/3/e/g" -e "s/4/a/g" -e "s/7/t/g" -e "s/5/s/g" leetSpeak.txt	//without pipes
+
+7.
+$ awk 'BEGIN {FS=" "} {print $1, $2} {sum=$3+$4+$5+$6+$7} {print $ awk 'BEGIN {FS=" "} {print $1, $2} {sum+=$3} {print sum/7*100}' grades.txtsum/5*100}' grades.txt
+
+8.
+$ grep '\(([0-9]\{3\})\|[0-9]\{3\}\)[ -]\?[0-9]\{3\}[ -]\?[0-9]\{4\}' regex_practice_data.txt
+$ grep -E '303-441-[0-9]{4}' regex_practice_data.txt
+$ grep -E '[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{3}' regex_practice_data.txt
+$ grep -E '[a-zA-Z0-9]+@[a-zA-Z]+\.gov' regex_practice_data.txt
+[a-mA-M]{1}[a-zA-Z0-9]*\.[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{3}

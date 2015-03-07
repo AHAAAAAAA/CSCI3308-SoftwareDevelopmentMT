@@ -1,0 +1,19 @@
+#!/bin/bash
+##Ahmed Almutawa and Parvinder Singh
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 filename"
+    exit 1
+fi
+echo "Script starting"
+sum=0
+while read a b c d e f
+do
+	sum=$((d+e+f))
+	x=3
+	sum=$(($sum / $x))
+	echo "$sum [$a] $c, $b"
+	sum=0
+	echo ""
+done < $1 |sort -t" " -k3
+
+echo "Script ending"
