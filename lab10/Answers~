@@ -1,0 +1,41 @@
+Snippet1:
+l16: indescriptive class name
+l19: hardcoded path
+l20: runs everything in a directory?!?
+l21,23,25: indescriptive function names
+Just every variable name sucks.
+l28: shitty syntax, no idea what it does.
+l35-40: if statements should be a single conditional consisting of if's and elifs.
+l43: get rid of the pointless comments young woman.
+l45: uh. bad?
+l54: bad again like 45
+
+0/10 maintainability, 0/10 scalability, 1/10 robustness (out of pity).
+
+
+Snippet2:
+Better variables good job!
+l22: Security disaster.
+l29: I don't understand this, I don't like this.
+l30: I don't understand this, I don't like this.
+l32: Comment what l32 checks.
+l33: reads whatever you give the program. Security booboo.
+l38: Why are you confused about your own code?
+l40-46: if statements should be a single conditional consisting of if's and elifs.
+l49: Can you subtract time like that? Is that the avg?
+l51: Move the round command out of the print.
+l52: unnecessary comments.
+
+5/10 maintainability, 7/10 scalability, 7/10 robustness
+
+Snippet3:
+better
+l21: You hardcoded your user path?!?
+l22: not pretty.
+l35: breakdown
+l36: breakdown
+l47-52: if statements should be a single conditional consisting of if's and elifs.
+l59: move the round function out of this
+l63-64: combine the 2 lines.
+
+8/10 maintainability, 8/10 scalability, 5/10 robustness

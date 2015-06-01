@@ -1,0 +1,14 @@
+1. Segmentation Fault
+2. pt->x = (rand() % (RADIUS * 2)) - RADIUS;
+3. The pointer doesn't have memory allocated to it so we just use malloc to allocate memory for it.
+4. b zeroDist
+5. p other_pt->x/y
+6. d breakpoint
+7. Yes, LEAK SUMMARY:
+==4171==    definitely lost: 31,999,984 bytes in 1,999,999 blocks
+8. Line 90 in pi.c
+9. The problem is with the malloc code not being freed after we use it. We use free(pointer) to free up this memory.
+10. 10000000 iterations and it takes about 1.048 seconds
+11. main 8.96%, zeroDist 5.06%, malloc 11.52%, free 4.21%, dist 4.92%
+12. I moved the malloc outside of the loop and free'd it after I finished the loop to avoid calling both commands as much, since they were obviously the biggest memory hogs.
+13. 0.823seconds
